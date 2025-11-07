@@ -1,34 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto de Tecnología</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mesas Automatizadas Inclusivas</title>
   <link rel="stylesheet" href="../estilos/pelado.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Proyecto de Tecnología</h1>
+    <h1>Mesas Automatizadas Inclusivas</h1>
     <nav>
-      <ul>
-        <li><a href="../pages/pelado.html">Inicio</a></li>
-        <li><a href="../pages/">Problema</a></li>
-        <li><a href="../pagespages/objetivos.html">Objetivos</a></li>
-        <li><a href="../pagespages/solucion.html">Solución</a></li>
-        <li><a href="../pagespages/materiales.html">Materiales</a></li>
-        <li><a href="../pagespages/resultados.html">Resultados</a></li>
-        <li><a href="../pagespages/conclusion.html">Conclusión</a></li>
-      </ul>
+      <button onclick="mostrar('inicio')">Inicio</button>
+      <button onclick="mostrar('problemas')">Planteamiento</button>
+      <button onclick="mostrar('objetivos')">Objetivos</button>
+      <button onclick="mostrar('solucion')">Solución</button>
+      <button onclick="mostrar('materiales')">Materiales</button>
+      <button onclick="mostrar('resultados')">Resultados</button>
+      <button onclick="mostrar('conclusion')">Conclusión</button>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Bienvenido a nuestro proyecto</h2>
-    <p>Explorá cómo usamos la creatividad, la ciencia y la tecnología para resolver un problema real.</p>
-  </section>
+  <main>
+    <section id="inicio" class="active">
+      <h2>Bienvenido</h2>
+      <p>Este proyecto busca mejorar la inclusión y autonomía de las personas en silla de ruedas mediante mesas automatizadas ajustables en altura e inclinación. 
+      Su propósito es brindar igualdad de oportunidades en el ámbito educativo, garantizando confort, independencia y una experiencia moderna.</p>
+      <img src="https://www.ortopediamimas.com/16737-large_default/mesas-vision-90-x-60-cm.jpg" alt="Mesa automatizada moderna">
+    </section>
+
+    <section id="problemas">
+      <h2>Planteamiento del Problema</h2>
+      <p>Las personas en silla de ruedas enfrentan dificultades con el mobiliario tradicional, debido a la altura y el diseño fijo de las mesas. Esto limita su autonomía, comodidad y capacidad de integración. En muchos casos requieren asistencia, lo que afecta su independencia y autoestima.</p>
+    </section>
+
+    <section id="objetivos">
+      <h2>Objetivos</h2>
+      <p><strong>Objetivo General:</strong> Diseñar e implementar mesas inteligentes y ergonómicas que ajusten automáticamente su altura e inclinación, garantizando la comodidad y autonomía del alumno en silla de ruedas.</p>
+      <p><strong>Objetivos Específicos:</strong></p>
+      <ul>
+        <li>Incorporar sistemas automatizados de ajuste.</li>
+        <li>Usar sensores que detecten la posición y altura de la silla.</li>
+        <li>Implementar controles accesibles como botones o app móvil.</li>
+        <li>Cumplir normas de accesibilidad y seguridad.</li>
+      </ul>
+    </section>
+
+    <section id="solucion">
+      <h2>Descripción de la Solución</h2>
+      <p>Las mesas estarán fabricadas con aluminio liviano, superficie antideslizante y base en forma de “U”. Incluirán motores eléctricos que regulan la altura (65–95 cm) y la inclinación (0°–30°), sensores ultrasónicos para detectar la silla y ajustes automáticos, además de controles accesibles vía Bluetooth.</p>
+    </section>
+
+    <section id="materiales">
+      <h2>Materiales</h2>
+      <ul>
+        <li>Aluminio liviano reciclable.</li>
+        <li>Motores eléctricos de bajo consumo.</li>
+        <li>Sensores ultrasónicos de proximidad.</li>
+        <li>Microcontrolador (Arduino o similar).</li>
+        <li>Batería recargable y panel solar opcional.</li>
+      </ul>
+    </section>
+
+    <section id="resultados">
+      <h2>Resultados Esperados</h2>
+      <p>Con este desarrollo se busca fomentar la autonomía, reducir la necesidad de asistencia y promover la inclusión real. Se espera que los usuarios puedan adaptar la mesa con facilidad, y que el sistema memorice sus preferencias para usos futuros.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2>Conclusión</h2>
+      <p>Las mesas automatizadas inclusivas representan un avance tecnológico y social. Permiten independencia, comodidad y accesibilidad, contribuyendo a una educación más equitativa, moderna y humana.</p>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 - Proyecto escolar desarrollado con pasión y esfuerzo 💡</p>
+    <p>Proyecto educativo | 2025</p>
   </footer>
+
+  <script>
+    function mostrar(id) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
